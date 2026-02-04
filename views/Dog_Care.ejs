@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Q8_style.css">
+        <script src="Q7.js"></script>
+    </head>
+
+    <body style="margin: 0px;">
+
+        <% try { %>
+            <%- include("partials/header") %>
+        <% } catch (e) { %>
+            <p style="color: red;">Header error: <%= e.message %></p>
+        <% } %>
+        
+
+        <div class="container">
+            <span style="font-size: smaller;">
+                <b>🐶 General Dog Care Instructions �</b><br><br>
+            
+                <b>1️⃣ Provide Proper Nutrition:</b><br>
+                - Feed high-quality dog food (wet and/or dry) appropriate for their age, size, and breed.<br>
+                - Ensure fresh water is available at all times.<br>
+                - Avoid toxic foods like chocolate, grapes, onions, garlic, and xylitol.<br>
+            
+                <b>2️⃣ Maintain a Clean Living Space:</b><br>
+                - Regularly clean your dog’s bedding and toys.<br>
+                - Pick up after your dog during walks and in your yard.<br>
+            
+                <b>3️⃣ Regular Grooming & Hygiene:</b><br>
+                - Brush your dog’s coat to reduce shedding and prevent tangles.<br>
+                - Bathe your dog as needed, depending on their breed and activity level.<br>
+                - Trim nails regularly to avoid overgrowth.<br>
+                - Clean ears and check for signs of infection.<br>
+            
+                <b>4️⃣ Ensure Regular Vet Checkups:</b><br>
+                - Schedule annual checkups and vaccinations.<br>
+                - Keep up with flea, tick, and heartworm prevention.<br>
+                - Spay/neuter your dog for health and behavioral benefits.<br>
+            
+                <b>5️⃣ Provide Mental & Physical Stimulation:</b><br>
+                - Take your dog on daily walks or runs for exercise.<br>
+                - Play with interactive toys to keep them engaged.<br>
+                - Train your dog with commands and tricks for mental stimulation.<br>
+            
+                <b>6️⃣ Give Love & Attention:</b><br>
+                - Spend quality time with your dog for bonding.<br>
+                - Learn their body language to understand their needs and emotions.<br><br>
+            
+                🐾 A happy, healthy dog is well-fed, active, and loved! ❤️
+            </span>
+            
+        </div>
+        <div class="side-menu">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/register">CREATE ACCOUNT</a></li>
+                <li><a href="/find">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a href="/cat-care">CAT CARE</a></li>
+                <li><a href="/give">A PET TO GIVE AWAY?</a></li>
+                <li><a href="/contact">CONTACT US</a></li>
+            </ul>
+        </div>
+       
+        <%- include("partials/footer") %>
+        
+    </body>
+</html>

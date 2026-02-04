@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 4</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/Q8_style.css">
+    <script src="/Q7_2.js" defer></script>
+</head>
+
+<body style="margin: 0px;">
+    <% try { %>
+        <%- include("partials/header") %>
+    <% } catch (e) { %>
+        <p style="color: red;">Header error: <%= e.message %></p>
+    <% } %>
+
+    <div class="container">
+        <form id="petForm" action="/give/submit" method="POST">
+            <fieldset>
+                <legend>Pet Giveaway</legend>
+
+                <p>Is it a Cat or a Dog:
+                    <label><input type="radio" name="Animal" value="DOG" required>Dog</label>
+                    <label><input type="radio" name="Animal" value="CAT">Cat</label>
+                </p>
+
+                <label>What breed is your animal:
+                    <input type="text" name="Breed" id="Breed" required>
+                </label><br>
+
+                <label>What age is your animal:
+                    <select name="age" id="age" required>
+                        <% for(let i = 1; i <= 10; i++) { %>
+                            <option value="<%= i %>"><%= i %></option>
+                        <% } %>
+                        <option value="10+">10+</option>
+                    </select>
+                </label><br>
+
+                <p>Gender:
+                    <label><input type="radio" name="Gender" value="Male" required>Male</label>
+                    <label><input type="radio" name="Gender" value="Female">Female</label>
+                </p>
+
+                <p>Does it get along with children:
+                    <label><input type="radio" name="get along with children" value="yes" required>YES</label>
+                    <label><input type="radio" name="get along with children" value="no">NO</label>
+                </p>
+
+                <p>Does it get along with dogs:
+                    <label><input type="radio" name="get along with dogs" value="yes" required>YES</label>
+                    <label><input type="radio" name="get along with dogs" value="no">NO</label>
+                </p>
+
+                <p>Does it get along with cats:
+                    <label><input type="radio" name="get along with cats" value="yes" required>YES</label>
+                    <label><input type="radio" name="get along with cats" value="no">NO</label>
+                </p>
+
+                <label>Tell us about the animal:</label><br>
+                <textarea id="Information" name="Information" rows="6" cols="40" placeholder="Type your message here..." maxlength="500" required></textarea><br><br>
+
+                <label>Owner's First name:
+                    <input type="text" name="fname" id="fname" required>
+                </label><br><br>
+
+                <label>Owner's Last name:
+                    <input type="text" name="famname" id="famname" required>
+                </label><br><br>
+
+                <label>Owner's Email:
+                    <input type="email" name="email" id="email" placeholder="Owner's email" required>
+                </label><br><br>
+
+                <button id="submit2" type="submit">Submit</button>
+                <input type="reset" id="reset" name="reset" value="Clear">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="side-menu">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/register">CREATE ACCOUNT</a></li>
+            <li><a href="/find">FIND A DOG/CAT</a></li>
+            <li><a href="/dog-care">DOG CARE</a></li>
+            <li><a href="/cat-care">CAT CARE</a></li>
+            <li><a href="/give">A PET TO GIVE AWAY?</a></li>
+            <li><a href="/contact">CONTACT US</a></li>
+        </ul>
+    </div>
+
+    <%- include("partials/footer") %>
+
+    <% if (message) { %>
+    <script>
+        alert("<%= message %>");
+    </script>
+    <% } %>
+</body>
+</html>

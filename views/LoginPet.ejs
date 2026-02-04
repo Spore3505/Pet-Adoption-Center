@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 4</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/Q8_style.css">
+</head>
+<body style="margin: 0px;">
+
+<%- include("partials/header") %>
+
+<div class="container">
+    <h2>Login Required to Submit a Pet</h2>
+
+    <% if (message) { %>
+        <p style="color: red;"><%= message %></p>
+    <% } %>
+
+    <form action="/give/login" method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div class="side-menu">
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/register">CREATE ACCOUNT</a></li>
+        <li><a href="/find">FIND A DOG/CAT</a></li>
+        <li><a href="/dog-care">DOG CARE</a></li>
+        <li><a href="/cat-care">CAT CARE</a></li>
+        <li><a href="/give">A PET TO GIVE AWAY?</a></li>
+        <li><a href="/contact">CONTACT US</a></li>
+    </ul>
+</div>
+
+<%- include("partials/footer") %>
+
+</body>
+</html>

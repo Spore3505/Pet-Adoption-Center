@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Q8_style.css">
+        <script src="Q7.js"></script>
+    </head>
+
+    <body style="margin: 0px;">
+
+        <% try { %>
+            <%- include("partials/header") %>
+        <% } catch (e) { %>
+            <p style="color: red;">Header error: <%= e.message %></p>
+        <% } %>
+        
+
+        <div class="container">
+            <span style="font-size: smaller;">
+                <b>🐱 General Cat Care Instructions 🐱</b><br><br>
+            
+                <b>1️⃣ Provide Proper Nutrition:</b><br>
+                - Feed high-quality cat food (wet and/or dry).<br>
+                - Ensure fresh water is available at all times.<br>
+                - Avoid toxic foods like onions, garlic, chocolate, and dairy.<br>
+            
+                <b>2️⃣ Keep a Clean Litter Box:</b><br>
+                - Scoop daily and change litter weekly.<br>
+                - Use an appropriate-sized box and unscented litter.<br>
+            
+                <b>3️⃣ Regular Grooming & Hygiene:</b><br>
+                - Brush your cat to reduce shedding and prevent matting.<br>
+                - Trim nails every few weeks.<br>
+                - Clean ears and check for dirt or infections.<br>
+            
+                <b>4️⃣ Ensure Regular Vet Checkups:</b><br>
+                - Schedule annual checkups and vaccinations.<br>
+                - Keep up with flea, tick, and worm prevention.<br>
+                - Spay/neuter your cat for health benefits.<br>
+            
+                <b>5️⃣ Provide Mental & Physical Stimulation:</b><br>
+                - Offer scratching posts to prevent furniture damage.<br>
+                - Play with interactive toys for exercise.<br>
+                - Create safe indoor spaces or a secure outdoor enclosure.<br>
+            
+                <b>6️⃣ Give Love & Attention:</b><br>
+                - Spend quality time with your cat for bonding.<br>
+                - Learn their body language to understand their needs.<br><br>
+            
+                🐾 A happy, healthy cat is well-fed, mentally stimulated, and loved! ❤️
+            </span>
+            
+        </div>
+        <div class="side-menu">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/register">CREATE ACCOUNT</a></li>
+                <li><a href="/find">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a href="/cat-care">CAT CARE</a></li>
+                <li><a href="/give">A PET TO GIVE AWAY?</a></li>
+                <li><a href="/contact">CONTACT US</a></li>
+            </ul>
+        </div>
+       
+        <%- include("partials/footer") %>
+        
+    </body>
+</html>
